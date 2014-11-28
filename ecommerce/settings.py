@@ -17,7 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'rt*(2o$rfgfi+s_w)8$^n@ocap(pvq%z7*58ljt^pf*k#x1c7d'
+SECRET_KEY = 'l8jyt^qbes)16fvzgx=t_kd3=0ch(&^x02x%rp#q71kewuz%%p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -95,15 +95,16 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
-#MEDIA_ROOT = '/home/bartosz/Desktop/ecommerce/static/media/'
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static", "media")
+#MEDIA_ROOT = '/Users/jmitch/Desktop/ecommerce/static/media/'
 
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static", "static_root")
 
 STATICFILES_DIRS = (
-        os.path.join(os.path.dirname(BASE_DIR), "static", "static_files"),
-    )
+    os.path.join(os.path.dirname(BASE_DIR), "static", "static_files"),
+)
 
 TEMPLATE_DIRS = (
-        os.path.join(BASE_DIR, 'templates'),
-    )
+    os.path.join(BASE_DIR, 'templates'),
+)
+

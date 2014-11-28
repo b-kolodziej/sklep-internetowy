@@ -1,32 +1,30 @@
-<!-- Static navbar -->
-    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+  <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="{% url 'home' %}">eCommerce Projekt</a>
+          <a class="navbar-brand" href="{% url 'home' %}">Sklep Internetowy</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
+        <div class="navbar-collapse collapse">
 
-
-            <form class="navbar-form navbar-left" role="search" action='/s/'>
-        <div class="form-group">
-      <input type="text" class="form-control" name='q' placeholder="czego szukasz?">
-        </div>
-      <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-      <li><a href="{% url 'products' %}">Produky</a></li>
-          <li><a href="{% url 'cart' %}">Koszyk <span class="badge">{% if not request.session.items_total %} 0 {% else %} {{ request.session.items_total }} {% endif%}</span></a></li>
-          
-          {% if user.is_authenticated %}
-          <li><a href="#">Konto</a></li>
-          {% endif %}
-        </ul>
-      </div><!--/.nav-collapse -->
-  </div>
-</div>
+          <form class="navbar-form navbar-left" role="search" action='/s/'>
+            <div class="form-group">
+          <input type="text" class="form-control" name='q' placeholder="czego szukasz?">
+            </div>
+          <button type="submit" class="btn btn-default">Szukaj</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+          <li><a href="{% url 'products' %}">Produkty</a></li>
+            <li><a href="{% url 'cart' %}">Koszyk <span class="badge">{% if not request.session.items_total %} 0 {% else %} {{ request.session.items_total }} {% endif%}</span></a></li>
+            {% if user.is_authenticated %}
+            <li><a href="#">Konto</a></li>
+            {% endif %}
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
