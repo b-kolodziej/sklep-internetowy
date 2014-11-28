@@ -24,10 +24,17 @@
 <td>Do zapłaty: {{ cart.total }}</td>
 </tr>
 </tfoot>
+<<<<<<< HEAD
 {% for item in cart.cartitem_set.all %}
 
 <tr><td>{{ item.product }}</td><td>{{ item.product.price }}</td>
 <td>{{ item.quantity }}</td><td><a href='{% url "update_cart" item.product.slug 0 %}'>Usuń</a></tr>
+=======
+{% for item in cart.items.all %}
+
+<tr><td>{{ item.product }}</td><td>{{ item.product.price }}</td>
+<td>{{ item.quantity }}</td><td><a href='{% url "update_cart" item.product.slug %}'>Usuń</a></tr>
+>>>>>>> origin/master
 {% endfor %}
 
 </table>
